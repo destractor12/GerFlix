@@ -6,6 +6,7 @@
 
 int main()
 {
+    int opcion;
     eSerie listaDeSeries[TAMSERIE];
     eUsuario listaDeUsuarios[TAMUSUARIO];
 
@@ -15,14 +16,30 @@ int main()
     inicializarUsuariosEstado(listaDeUsuarios,TAMUSUARIO);
     inicializarUsuariosHardCode(listaDeUsuarios);
 
-/*  1. Mostrar el listado de series
-    2. Mostrar el listado de usuarios
-    3. Mostrar el listado de Usuarios con el nombre de la serie que ve
-    4. Mostrar por cada serie, el nombre de los usuarios que la ven.
-*/
 
 
+    do
+    {
+        opcion = mostrarMenu();
 
+        switch(opcion)
+        {
+            case 1:
+            break;
 
+            case 2:
+            break;
+
+            case 3:
+            break;
+
+            case 4:
+            break;
+
+            case 5: opcion=5;
+            break;
+        }
+
+    }while(opcion!=5);
     return 0;
 }

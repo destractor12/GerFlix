@@ -1,4 +1,6 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "Usuario.h"
 
 void inicializarUsuariosEstado(eUsuario usuarios[], int cant)
@@ -32,12 +34,33 @@ void inicializarUsuariosHardCode(eUsuario usuarios[])
 
     }
 
+}
 
+int mostrarMenu()
+{
+    int opcion;
 
+    printf("1. Mostrar el listado de series\n");
+    printf("2. Mostrar el listado de usuarios\n");
+    printf("3. Mostrar el listado de Usuarios con el nombre de la serie que ve\n");
+    printf("4. Mostrar por cada serie, el nombre de los usuarios que la ven\n");
+    printf("5. Salir\n");
+    printf("Ingrese una opcion: ");
+    scanf("%d",&opcion);
 
+    opcion=validarEntero(opcion,"una opcion: ",1,5);
 
+    return opcion;
 
+}
 
+int validarEntero(int numero,char texto[],int min,int max)
+{
+    while(numero<min || numero>max)
+    {
 
-
+        printf("\nReingrese %s",texto);
+        scanf("%d",&numero);
+    }
+    return numero;
 }
